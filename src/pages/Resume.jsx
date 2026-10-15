@@ -65,7 +65,7 @@ export default function Resume() {
 
               <div style={{ textAlign: 'right', display: 'flex', flexDirection: 'column', alignItems: 'flex-end', gap: '0.4rem' }}>
                 <span className="badge badge--success">
-                  Available for Hire
+                  Open to freelance projects
                 </span>
                 <a 
                   href="/documents/Ayush_Kumar_Resume.pdf" 
@@ -95,14 +95,14 @@ export default function Resume() {
                     Bachelor of Technology (B.Tech) in Electrical Engineering
                   </div>
                   <div className="education-item__school">
-                    Undergraduate Engineering Program • Affiliated University / Institute
+                    Bihar Engineering University
                   </div>
                   <div style={{ fontSize: '0.8rem', color: 'var(--color-text-secondary)', marginTop: '0.25rem' }}>
                     Focus Areas: Power Systems, Electrical Machines, Switchgear & Protection, Renewable Energy Engineering, Control Systems.
                   </div>
                 </div>
                 <div className="education-item__date">
-                  Graduated Graduate
+                  Graduated (2021-25)
                 </div>
               </div>
             </div>

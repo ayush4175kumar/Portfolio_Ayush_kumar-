@@ -16,23 +16,23 @@ export default function Home() {
             <div>
               <div className="editorial-pill">
                 <span className="editorial-pill__pulse" aria-hidden="true"></span>
-                <span className="editorial-pill__title">Available for Design & Engineering</span>
+                <span className="editorial-pill__title">Available for freelance projects</span>
                 <span className="editorial-pill__sep">/</span>
-                <span className="editorial-pill__sub">B.Tech Electrical • AutoCAD</span>
+                <span className="editorial-pill__sub">Solar PV • AutoCAD</span>
               </div>
               <h1 className="home-hero__heading">
-                Engineering Precision in <span className="text-highlight">Solar PV Design</span> &amp; <span className="text-highlight">AutoCAD</span> Draftsmanship.
+                Solar PV design, with <span className="text-highlight">the details thought through.</span>
               </h1>
               <p className="home-hero__intro">
-                Hi, I'm <strong>Ayush Kumar</strong>. I specialize in AutoCAD 2D drafting, solar rooftop photovoltaic layout design, single-line diagrams (SLD), and electrical power distribution schematics—complemented by strategic technical content writing.
+                I’m <strong>Ayush Kumar</strong>, an electrical engineering graduate taking on solar layout, AutoCAD drafting, and single-line diagram work. The projects here are clearly marked as preliminary, academic, or self-initiated samples.
               </p>
 
               <div className="home-hero__actions">
                 <Link to="/projects/commercial-rooftop-solar-pv" className="btn btn--editorial-primary">
-                  Explore 119.6 kWp Solar Design ↗
+                  View a solar design sample ↗
                 </Link>
-                <Link to="/projects" className="btn btn--editorial-secondary">
-                  All Projects
+                <Link to="/contact" className="btn btn--editorial-secondary">
+                  Discuss a project
                 </Link>
                 <Link to="/resume" className="btn btn--editorial-ghost">
                   Resume (PDF) ↓
@@ -55,7 +55,7 @@ export default function Home() {
                 <div className="hero-photo-badge">
                   <span className="hero-photo-badge__dot"></span>
                   <span className="hero-photo-badge__text">
-                    Open to Hire • Design Engineer & CAD Specialist
+                    Open to freelance project work
                   </span>
                 </div>
               </div>
@@ -100,14 +100,14 @@ export default function Home() {
         <div className="container">
           <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'flex-end', marginBottom: '2.5rem', flexWrap: 'wrap', gap: '1rem' }}>
             <div>
-              <div className="section-label">Featured Work</div>
+              <div className="section-label">Selected Samples</div>
               <h2 className="section-title">Engineering & Design Portfolio</h2>
               <p className="section-subtitle">
-                Demonstrated technical capabilities across solar photovoltaic modeling, CAD documentation, and digital communication.
+                A mix of academic concepts and self-initiated examples. Each project page describes its scope and status.
               </p>
             </div>
             <Link to="/projects" className="btn btn--secondary">
-              View All Projects & Filter →
+              Browse all samples →
             </Link>
           </div>
 
@@ -201,14 +201,14 @@ export default function Home() {
       <section className="section" style={{ background: 'var(--color-navy)', color: 'var(--color-white)', textAlign: 'center' }}>
         <div className="container container--narrow">
           <h2 style={{ fontSize: '2.25rem', color: 'var(--color-white)', marginBottom: '1rem' }}>
-            Looking for a Dedicated Design Engineer?
+            Have a solar or CAD project in mind?
           </h2>
           <p style={{ color: '#cbd5e1', fontSize: '1.125rem', maxWidth: '600px', margin: '0 auto 2rem', lineHeight: '1.7' }}>
-            Open to full-time Design Engineer roles, freelance AutoCAD drafting contracts, and technical content collaborations.
+            I’m available for freelance drafting and preliminary design work, and also open to full-time design roles. Share a brief and I’ll get back to you directly.
           </p>
           <div style={{ display: 'flex', justifyContent: 'center', gap: '1rem', flexWrap: 'wrap' }}>
             <Link to="/contact" className="btn btn--primary btn--lg" style={{ background: 'var(--color-blue)', borderColor: 'var(--color-blue)' }}>
-              Get in Touch →
+              Discuss your project →
             </Link>
             <a 
               href="https://linkedin.com/in/ayush-kumar-605990259" 

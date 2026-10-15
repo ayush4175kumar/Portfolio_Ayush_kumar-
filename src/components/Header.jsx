@@ -60,7 +60,7 @@ export default function Header() {
 
         <div className="header-actions">
           <Link to="/contact" className="header-cta-btn">
-            Get in Touch ↗
+            Discuss a project ↗
           </Link>
           <button
             className="mobile-toggle"

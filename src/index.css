@@ -6,29 +6,29 @@
 /* --- CSS Custom Properties (Design Tokens) --- */
 :root {
   /* Colors — Apple & Scandinavian Minimalist Palette */
-  --color-navy: #09090B;
-  --color-navy-light: #18181B;
-  --color-blue: #2563EB;
-  --color-blue-light: #3B82F6;
-  --color-blue-subtle: #F4F4F5;
+  --color-navy: #18352E;
+  --color-navy-light: #25483F;
+  --color-blue: #B6533A;
+  --color-blue-light: #D06A4E;
+  --color-blue-subtle: #F5E8E1;
   --color-white: #FFFFFF;
-  --color-bg: #FAFAFA;
-  --color-bg-alt: #F4F4F5;
-  --color-text: #09090B;
-  --color-text-secondary: #52525B;
-  --color-text-light: #A1A1AA;
-  --color-border: #E4E4E7;
-  --color-border-light: #F4F4F5;
+  --color-bg: #FCFAF6;
+  --color-bg-alt: #F0F2EB;
+  --color-text: #1E2B26;
+  --color-text-secondary: #59665F;
+  --color-text-light: #8B958E;
+  --color-border: #E3E5DC;
+  --color-border-light: #EEF0E9;
   --color-success: #059669;
   --color-success-bg: #ecfdf5;
   --color-warning: #d97706;
   --color-warning-bg: #fffbeb;
   --color-error: #dc2626;
   --color-error-bg: #fef2f2;
-  --color-info-bg: #eff6ff;
+  --color-info-bg: #EDF3EE;
 
   /* Typography */
-  --font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  --font-family: 'DM Sans', sans-serif;
   --font-size-xs: 0.75rem;
   --font-size-sm: 0.875rem;
   --font-size-base: 1rem;
@@ -102,7 +102,7 @@ body {
   font-size: var(--font-size-base);
   line-height: 1.7;
   color: var(--color-text);
-  background-color: var(--color-white);
+  background-color: var(--color-bg);
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
@@ -653,7 +653,9 @@ ul, ol {
 /* --- Homepage Hero (Apple / Scandinavian Minimalist) --- */
 .home-hero {
   padding: 5rem 0 6rem;
-  background: radial-gradient(circle at 50% 0%, rgba(37, 99, 235, 0.03), transparent 60%), #FFFFFF;
+  background-color: #FCFAF6;
+  background-image: linear-gradient(rgba(24, 53, 46, 0.035) 1px, transparent 1px), linear-gradient(90deg, rgba(24, 53, 46, 0.035) 1px, transparent 1px);
+  background-size: 34px 34px;
   border-bottom: 1px solid var(--color-border);
 }
 
@@ -671,8 +673,8 @@ ul, ol {
   gap: 8px;
   padding: 5px 14px;
   border-radius: 9999px;
-  background: #F4F4F5;
-  border: 1px solid #E4E4E7;
+  background: rgba(255, 255, 255, 0.88);
+  border: 1px solid var(--color-border);
   font-size: 0.75rem;
   color: #18181B;
   margin-bottom: 1.5rem;
@@ -709,17 +711,18 @@ ul, ol {
 }
 
 .home-hero__heading {
-  font-size: clamp(2.25rem, 4.5vw, 3.5rem);
-  font-weight: 800;
-  color: #09090B;
-  line-height: 1.15;
-  letter-spacing: -0.035em;
+  max-width: 620px;
+  font-family: 'Newsreader', Georgia, serif;
+  font-size: 3.5rem;
+  font-weight: 500;
+  color: var(--color-navy);
+  line-height: 1.08;
   margin-bottom: var(--space-6);
 }
 
 .text-highlight {
-  color: #09090B;
-  background: linear-gradient(180deg, transparent 65%, rgba(37, 99, 235, 0.12) 65%);
+  color: var(--color-blue);
+  background: none;
 }
 
 .home-hero__intro {
@@ -739,21 +742,21 @@ ul, ol {
 
 /* Editorial Minimalist Buttons */
 .btn--editorial-primary {
-  background: #09090B;
+  background: var(--color-navy);
   color: #FFFFFF;
-  border-radius: 9999px;
+  border-radius: 6px;
   padding: 10px 22px;
   font-size: 0.875rem;
   font-weight: 500;
-  border: 1px solid #09090B;
+  border: 1px solid var(--color-navy);
   transition: all 0.2s ease;
   box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
   text-decoration: none;
 }
 
 .btn--editorial-primary:hover {
-  background: #27272A;
-  border-color: #27272A;
+  background: var(--color-blue);
+  border-color: var(--color-blue);
   color: #FFFFFF;
   transform: translateY(-1px);
   box-shadow: 0 6px 16px rgba(0, 0, 0, 0.12);
@@ -761,20 +764,20 @@ ul, ol {
 
 .btn--editorial-secondary {
   background: #FFFFFF;
-  color: #09090B;
-  border-radius: 9999px;
+  color: var(--color-navy);
+  border-radius: 6px;
   padding: 10px 22px;
   font-size: 0.875rem;
   font-weight: 500;
-  border: 1px solid #E4E4E7;
+  border: 1px solid var(--color-border);
   transition: all 0.2s ease;
   text-decoration: none;
 }
 
 .btn--editorial-secondary:hover {
-  border-color: #09090B;
-  background: #FAFAFA;
-  color: #09090B;
+  border-color: var(--color-navy);
+  background: #FFFFFF;
+  color: var(--color-navy);
 }
 
 .btn--editorial-ghost {
@@ -824,7 +827,7 @@ ul, ol {
   }
 
   .home-hero__heading {
-    font-size: var(--font-size-4xl);
+    font-size: 3rem;
   }
 
   .home-hero__visual {
@@ -839,7 +842,7 @@ ul, ol {
 
 @media (max-width: 480px) {
   .home-hero__heading {
-    font-size: var(--font-size-3xl);
+    font-size: 2.5rem;
   }
 
   .home-hero__actions {
@@ -863,6 +866,23 @@ ul, ol {
 .snapshot__item {
   text-align: center;
   padding: var(--space-6) var(--space-4);
+}
+
+.contact-layout {
+  grid-template-columns: 1fr 1.15fr;
+}
+
+.contact-form-fields {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+}
+
+@media (max-width: 768px) {
+  .contact-layout,
+  .contact-form-fields {
+    grid-template-columns: 1fr;
+  }
 }
 
 .snapshot__icon {

@@ -71,7 +71,7 @@ export default function About() {
                   </div>
                   <div className="about-spec-row">
                     <span className="about-spec-label">Status:</span>
-                    <span style={{ color: 'var(--color-success)', fontWeight: '600' }}>Available for Hire</span>
+                    <span style={{ color: 'var(--color-success)', fontWeight: '600' }}>Open to freelance projects</span>
                   </div>
                 </div>
 

@@ -18,7 +18,15 @@ export default function Contact() {
 
   const handleSubmit = (e) => {
     e.preventDefault()
-    // In static frontend, simulate clean submission
+    const subject = formData.subject || `Project inquiry from ${formData.name}`
+    const body = [
+      `Name: ${formData.name}`,
+      `Email: ${formData.email}`,
+      `Inquiry type: ${formData.inquiryType}`,
+      '',
+      formData.message
+    ].join('\n')
+    window.location.href = `mailto:ayushkumar9128750@gmail.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`
     setSubmitted(true)
   }
 
@@ -26,7 +34,7 @@ export default function Contact() {
     <div>
       <PageHero
         title="Contact & Technical Consultation"
-        subtitle="Open for full-time Design Engineer roles, freelance AutoCAD drafting, solar PV design consultation, and content strategy collaborations."
+        subtitle="Available for freelance solar PV layout, AutoCAD drafting, and technical documentation projects. Also open to full-time design roles."
         breadcrumb={[
           { label: 'Home', to: '/' },
           { label: 'Contact' }
@@ -37,18 +45,17 @@ export default function Contact() {
         <div className="container">
           <div style={{
             display: 'grid',
-            gridTemplateColumns: '1fr 1.3fr',
             gap: 'var(--space-12)',
             alignItems: 'start'
-          }}>
+          }} className="contact-layout">
             {/* Left Column: Direct Contact Info */}
             <div>
               <div className="section-label">Direct Communication</div>
               <h2 style={{ fontSize: '1.75rem', marginBottom: '1.5rem', color: 'var(--color-navy)' }}>
-                Let's Discuss Your Project or Role
+                Tell Me What You’re Working On
               </h2>
               <p style={{ color: 'var(--color-text-secondary)', marginBottom: '2rem', lineHeight: '1.7' }}>
-                Whether you are a solar EPC firm seeking CAD layouts and SLDs, an engineering consultancy looking for a dedicated Design Engineer, or a digital team needing technical copywriting, feel free to reach out.
+                Send a short project brief, drawing requirements, or role details. I’m based in Sasaram, Bihar, and available for remote collaboration.
               </p>
 
               <div style={{ display: 'flex', flexDirection: 'column', gap: '1.25rem', marginBottom: '2.5rem' }}>
@@ -292,7 +299,7 @@ export default function Contact() {
 
               {/* Status Note */}
               <div className="notice notice--info">
-                <strong>Current Status:</strong> Actively interviewing for Design Engineer, AutoCAD Electrical Draftsman, and Junior Solar Design Engineer positions.
+                <strong>Availability:</strong> Open to freelance projects and full-time design roles.
               </div>
             </div>
 
@@ -302,7 +309,7 @@ export default function Contact() {
                 Send a Direct Message
               </h3>
               <p style={{ fontSize: '0.875rem', color: 'var(--color-text-secondary)', marginBottom: '1.5rem' }}>
-                Fill out the form below. All messages route directly to Ayush's professional inbox.
+                Submitting opens your email app with the details filled in. The message is sent only when you press Send there.
               </p>
 
               {submitted ? (
@@ -315,15 +322,15 @@ export default function Contact() {
                 }}>
                   <div style={{ fontSize: '2.5rem', marginBottom: '0.5rem' }}>✓</div>
                   <h4 style={{ color: 'var(--color-success)', marginBottom: '0.5rem', fontSize: '1.25rem' }}>
-                    Message Received
+                    Email draft ready
                   </h4>
                   <p style={{ color: 'var(--color-navy)', fontSize: '0.875rem', marginBottom: '1.5rem' }}>
-                    Thank you, <strong>{formData.name}</strong>. Your message regarding "<em>{formData.subject || formData.inquiryType}</em>" has been noted. You will receive a reply at <strong>{formData.email}</strong> shortly.
+                    Your email app should open with this inquiry addressed to Ayush. Review the draft and press Send. If no email app opens, write directly to <a href="mailto:ayushkumar9128750@gmail.com">ayushkumar9128750@gmail.com</a>.
                   </p>
                   <button 
                     onClick={() => {
                       setSubmitted(false)
-                      setFormData({ name: '', email: '', inquiryType: 'job', subject: '', message: '' })
+                      setFormData({ name: '', email: '', inquiryType: 'solar', subject: '', message: '' })
                     }}
                     className="btn btn--secondary"
                     style={{ fontSize: '0.875rem' }}
@@ -342,7 +349,7 @@ export default function Contact() {
                         type="text" 
                         name="name" 
                         required 
-                        placeholder="e.g. Rahul Sharma"
+                        placeholder="e.g. Ayush kumar"
                         value={formData.name} 
                         onChange={handleChange}
                         style={{
@@ -398,10 +405,10 @@ export default function Contact() {
                           backgroundColor: 'var(--color-white)'
                         }}
                       >
-                        <option value="job">Full-Time Design Engineer Role</option>
                         <option value="solar">Solar PV System Design / SLD</option>
                         <option value="autocad">AutoCAD 2D Drafting Freelance</option>
                         <option value="content">Technical & SEO Content Writing</option>
+                        <option value="job">Full-Time Design Engineer Role</option>
                         <option value="other">General Engineering Inquiry</option>
                       </select>
                     </div>
@@ -456,7 +463,7 @@ export default function Contact() {
                     className="btn btn--primary" 
                     style={{ alignSelf: 'flex-start', marginTop: '0.5rem' }}
                   >
-                    Submit Technical Inquiry →
+                    Open email app to send inquiry →
                   </button>
                 </form>
               )}
